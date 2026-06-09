@@ -41,7 +41,7 @@
         gtag('config', 'G-RX4KYPXND0');
     </script>
 
-    <!-- Meta Pixel Code -->
+    <!-- Meta Pixel Code (Browser + CAPI deduplication) -->
     <script>
         !function(f,b,e,v,n,t,s)
         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -52,7 +52,35 @@
         s.parentNode.insertBefore(t,s)}(window, document,'script',
         'https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '1250334555460081');
-        fbq('track', 'PageView');
+
+        window.metaEventId = function() {
+            return 'evt_' + Date.now() + '_' + Math.random().toString(36).slice(2, 10);
+        };
+        window.metaGetCookie = function(name) {
+            const m = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+            return m ? m[2] : undefined;
+        };
+        window.metaTrack = function(eventName, customData) {
+            const eventId = window.metaEventId();
+            fbq('track', eventName, customData || {}, { eventID: eventId });
+            fetch('/api/meta-capi', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    event_name: eventName,
+                    event_id: eventId,
+                    event_source_url: window.location.href,
+                    custom_data: customData || {},
+                    user_data: {
+                        fbp: window.metaGetCookie('_fbp'),
+                        fbc: window.metaGetCookie('_fbc'),
+                    },
+                }),
+                keepalive: true,
+            }).catch(() => {});
+        };
+
+        window.metaTrack('PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
         src="https://www.facebook.com/tr?id=1250334555460081&ev=PageView&noscript=1"
