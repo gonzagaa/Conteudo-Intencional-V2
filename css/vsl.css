@@ -19,12 +19,12 @@
 }
 
 #vsl-gate img {
-    width: 55%;
+    width: 60%;
 }
 
 #vsl-gate .vsl-inner {
     width: 100%;
-    max-width: 520px;
+    max-width: 620px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -38,7 +38,7 @@
     font-family: var(--bricolage);
     color: var(--marrom);
     font-weight: 700;
-    font-size: 3rem;
+    font-size: 2.7rem;
     line-height: 1.15;
     letter-spacing: -0.02em;
     margin: 0;
