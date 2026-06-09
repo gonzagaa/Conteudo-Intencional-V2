@@ -4,8 +4,8 @@
 
 #vsl-gate {
     width: 100%;
-    min-height: 110vh;
-    min-height: 110dvh;
+    min-height: 100vh;
+    min-height: 100dvh;
     background-color: #e6ddd6;
     display: flex;
     align-items: center;
@@ -31,6 +31,7 @@
     align-items: center;
     text-align: center;
     gap: 24px;
+
 }
 
 #vsl-gate .vsl-title {
@@ -125,9 +126,13 @@
 @media (max-width: 600px) {
     #vsl-gate {
         padding: 36px 18px 72px;
+        min-height: 100vh;
+        min-height: 100dvh;
     }
     #vsl-gate .vsl-inner {
         gap: 18px;
+
+        margin-top: -10%;
     }
     #vsl-gate .vsl-video {
         border-radius: 10px;
