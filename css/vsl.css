@@ -138,8 +138,8 @@
         border-radius: 10px;
     }
     #vsl-gate .vsl-scroll-hint {
-        bottom: 7%;
-        font-size: 0.82rem;
+        bottom: 12%;
+        font-size: 1.2rem;
     }
 
     #vsl-gate .vsl-title {
