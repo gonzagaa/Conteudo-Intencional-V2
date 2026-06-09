@@ -4,8 +4,8 @@
 
 #vsl-gate {
     width: 100%;
-    min-height: 100vh;
-    min-height: 100dvh;
+    min-height: 110vh;
+    min-height: 110dvh;
     background-color: #e6ddd6;
     display: flex;
     align-items: center;
