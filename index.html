@@ -66,7 +66,7 @@
             fbq('track', eventName, customData || {}, { eventID: eventId });
 
             console.log('%c[META] Enviando para CAPI (servidor)...', 'color:#888', { eventName, eventId });
-            fetch('/api/meta-capi', {
+            fetch(window.META_CAPI_URL, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -91,6 +91,8 @@
             })
             .catch(err => console.error('[META] ❌ Erro ao chamar CAPI', err));
         };
+
+        window.META_CAPI_URL = 'https://conteudo-intencional-v2.vercel.app/api/meta-capi';
 
         console.log('%c[META] Inicializando pixel ' + '1250334555460081', 'color:#1877f2;font-weight:bold');
         window.metaTrack('PageView');
