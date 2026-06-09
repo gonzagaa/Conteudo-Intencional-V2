@@ -1,0 +1,378 @@
+#padroes {
+  position: relative;
+  overflow: hidden;
+    background: #ece6e1;
+  padding-block: 0;
+}
+
+#padroes header h2 {
+    color: var(--creme);
+    font-size: 2.8rem;
+    line-height: 1;
+}
+
+#padroes .wrapper {
+  width: min(150rem, 100%);
+}
+
+#padroes .padroes-box {
+  position: relative;
+  overflow: hidden;
+
+  min-height: 42rem;
+  width: 95%;
+  margin-left: 2.5%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.25) 0%, rgba(255,255,255,0) 45%),
+    linear-gradient(135deg, var(--laranja-vibrante) 0%, var(--laranja-queimado) 100%);
+  border-radius: 2.8rem;
+
+  padding: 4rem 2rem;
+
+  isolation: isolate;
+  
+}
+
+#padroes .padroes-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  background:
+    radial-gradient(circle at 50% 20%, rgba(255, 87, 25, 0.12), transparent 35%),
+    radial-gradient(circle at 15% 70%, rgba(255, 87, 25, 0.10), transparent 35%);
+
+  pointer-events: none;
+}
+
+#padroes .padroes-marquee {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+
+  width: 130%;
+  overflow: hidden;
+
+  transform: translate(-50%, -50%) rotate(2.4deg);
+
+  background: var(--creme);
+
+  border-top: 1px solid rgba(255, 245, 220, 0.5);
+  border-bottom: 1px solid rgba(255, 245, 220, 0.5);
+
+  box-shadow: 0 0 4rem rgba(255, 87, 25, 0.35);
+}
+
+#padroes .padroes-track {
+  width: max-content;
+
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  padding-block: 1.6rem;
+
+  animation: padroesMarquee 18s linear infinite;
+}
+
+#padroes .padroes-item {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+
+  flex-shrink: 0;
+
+  color: var(--marrom);
+  font-family: var(--bricolage, "Bricolage Grotesque", sans-serif);
+  font-size: 3.4rem;
+  font-weight: 400;
+  line-height: 1;
+  white-space: nowrap;
+  letter-spacing: -0.08rem;
+  text-transform: lowercase;
+}
+
+#padroes .padroes-item span {
+  width: 6rem;
+  height: 3.8rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--laranja-vibrante, #FF5719);
+  background: var(--marrom);
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 999rem;
+
+  font-size: 2.4rem;
+}
+
+#padroes .padroes-card {
+  position: relative;
+  z-index: 3;
+
+  width: min(78rem, 92%);
+  border-radius: 8rem;
+
+  padding: 1.6rem;
+
+  background:
+    linear-gradient(
+      110deg,
+      #fff5dd 0%,
+      #fff5dd 10%,
+      var(--laranja-vibrante, #FF5719) 22%,
+      #fff5dd 62%,
+      #FF5719 82%,
+      #FF5719 100%
+    );
+
+  box-shadow:
+    0 2.5rem 6rem rgba(0, 0, 0, 0.55),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+}
+
+#padroes .padroes-card::before {
+  content: "";
+  position: absolute;
+  inset: 2.2rem;
+  z-index: -1;
+
+  border-radius: inherit;
+
+  background:
+    linear-gradient(
+      110deg,
+      #ff7a26 0%,
+      #ff3d00 32%,
+      #3a3a3a 72%,
+      #1c1c1c 100%
+    );
+
+  filter: blur(0.2px);
+}
+
+#padroes .padroes-card-inner {
+  position: relative;
+
+  min-height: 30rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 4.5rem 3.5rem;
+
+   background: var(--gradient);
+  border: 1px solid rgba(255, 245, 220, 0.22);
+  border-radius: 6.4rem;
+
+  text-align: center;
+}
+
+#padroes .padroes-icon {
+  width: 7.2rem;
+  height: 4.6rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 2.6rem;
+
+  color: #fff5dd;
+  border: 1px solid var(--laranja-vibrante, #FF5719);
+  border-radius: 999rem;
+
+  font-size: 2.8rem;
+
+  box-shadow:
+    0 0 2rem rgba(255, 87, 25, 0.25),
+    inset 0 0 1.4rem rgba(255, 87, 25, 0.08);
+}
+
+
+#padroes .padroes-card-inner p {
+  max-width: 58rem;
+
+  margin-top: 2rem;
+
+  color: var(--creme);
+  font-family: var(--montserrat, "Montserrat", sans-serif);
+  font-size: clamp(1.4rem, 1.6vw, 1.8rem);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+#padroes .padroes-button {
+  width: fit-content;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  margin-top: 2.8rem;
+  padding: 1.6rem 2.4rem;
+
+  background: var(--laranja-vibrante, #FF5719);
+  color: #fff5dd;
+
+  border: 1px solid rgba(255, 245, 221, 0.35);
+  border-radius: 999rem;
+
+  font-family: var(--bricolage, "Bricolage Grotesque", sans-serif);
+  font-size: 1.4rem;
+  font-weight: 800;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  box-shadow:
+    0 1.2rem 3rem rgba(255, 87, 25, 0.35),
+    inset 0 0 1.2rem rgba(255, 255, 255, 0.15);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    filter 0.3s ease;
+}
+
+#padroes .padroes-button:hover {
+  transform: translateY(-0.3rem);
+  filter: brightness(1.05);
+
+  box-shadow:
+    0 1.6rem 4rem rgba(255, 87, 25, 0.45),
+    inset 0 0 1.2rem rgba(255, 255, 255, 0.18);
+}
+
+#padroes .padroes-button ion-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+@keyframes padroesMarquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 767px) {
+  #padroes {
+    padding-block: 4rem;
+  }
+
+  #padroes .wrapper {
+    padding-inline: 1.6rem;
+  }
+
+  #padroes .padroes-box {
+    min-height: 42rem;
+    border-radius: 2rem;
+    padding: 3rem 1.2rem;
+  }
+
+  #padroes .padroes-marquee {
+    width: 180%;
+    transform: translate(-50%, -50%) rotate(4deg);
+  }
+
+  #padroes .padroes-track {
+    padding-block: 1.2rem;
+    gap: 1.4rem;
+    animation-duration: 14s;
+  }
+
+  #padroes .padroes-item {
+    font-size: 2.2rem;
+    letter-spacing: -0.04rem;
+  }
+
+  #padroes .padroes-item span {
+    width: 4.8rem;
+    height: 3.2rem;
+    font-size: 1.8rem;
+  }
+
+  #padroes .padroes-card {
+    width: 100%;
+    border-radius: 4rem;
+    padding: 1rem;
+  }
+
+  #padroes .padroes-card::before {
+    inset: 1.5rem;
+  }
+
+  #padroes .padroes-card-inner {
+    min-height: 30rem;
+    border-radius: 3.2rem;
+    padding: 3rem 2rem;
+  }
+
+  #padroes .padroes-icon {
+    width: 6rem;
+    height: 4rem;
+    margin-bottom: 2rem;
+    font-size: 2.4rem;
+  }
+
+  #padroes h2 {
+    font-size: 2.2rem;
+    letter-spacing: -0.08rem;
+  }
+
+  #padroes h2 span {
+    font-size: 3rem;
+    line-height: 0.9;
+  }
+
+  #padroes .padroes-card-inner p {
+    margin-top: 1.6rem;
+    font-size: 1.4rem;
+  }
+
+  #padroes .padroes-button {
+    width: 100%;
+    padding: 1.5rem 1.8rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1080px) {
+  #padroes .padroes-box {
+    min-height: 52rem;
+    border-radius: 3.6rem;
+  }
+
+  #padroes .padroes-card {
+    width: min(86rem, 80%);
+
+  }
+
+  #padroes .padroes-card-inner {
+    min-height: 32rem;
+
+    padding: 5rem;
+
+  }
+
+  section#padroes header h2 {
+    font-size: 6rem;
+  }
+}

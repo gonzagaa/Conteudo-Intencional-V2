@@ -1,0 +1,106 @@
+#inicio {
+    overflow: hidden;
+    position: relative;
+    background: #ece6e1;
+
+    padding-top: 8rem;
+}
+
+#inicio header {
+    text-align: left;
+    align-items: start;
+}
+
+#inicio img {
+    width: 100%;
+}
+
+#inicio .topics {
+    margin-block: 2rem;
+}
+
+#inicio .topics p {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+#inicio .topics p ion-icon {
+    font-size: 2rem;
+    color: var(--laranja-vibrante);
+}
+
+#inicio header h3 {
+    background: var(--marrom-escuro);
+    color: var(--creme);
+    font-family: var(--bricolage);
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    line-height: 1.2;
+
+    margin-top: 2rem;
+}
+
+#inicio header h3 span {
+    font-family: var(--serif);
+    color: var(--laranja-vibrante);
+
+    font-size: 1.7rem;
+}
+
+#inicio img.star {
+    display: none;
+}
+
+@media (min-width: 1080px) {
+    section#inicio header {
+        text-align: center;
+        align-items: center;
+
+        margin-inline: 15%;
+        padding-inline: 5%;
+        padding-block: 3%;
+        border-radius: 3rem;
+
+        background: #e7ded5;
+
+
+        border-bottom: 12px solid var(--marrom);
+        border-left: 8px solid var(--marrom);
+
+        position: relative;
+        z-index: 2;
+    }
+
+    section#inicio img.star {
+        display: inherit;
+
+        position: absolute;
+        z-index: 0;
+        top: 0;
+    }
+
+    section#inicio img.star.um {
+        width: 15%;
+        left: 17%;
+        top: 2%;
+    }
+
+    section#inicio img.star.dois {
+        width: 12%;
+        right: 18%;
+        top: initial;
+        bottom: 1%;
+        z-index: 2;
+    }
+
+    section#inicio header h3 {
+        font-size: 1.8rem;
+    }
+
+    section#inicio header h3 span {
+        font-size: 2rem;
+    }
+}

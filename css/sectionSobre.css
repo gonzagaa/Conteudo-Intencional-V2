@@ -1,0 +1,37 @@
+#sobre {
+    overflow: hidden;
+    position: relative;
+    background: #ece6e1;
+}
+
+#sobre img {
+    width: 100%;
+
+    margin-bottom: 2rem;
+}
+
+#sobre header {
+    text-align: left;
+}
+
+#sobre header h2 {
+    font-size: 5rem;
+}
+
+@media (min-width: 1080px) {
+    section#sobre .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "a b";
+        align-items: center;
+        gap: 5rem;
+    }
+
+    section#sobre .content header {
+        grid-area: a;
+    }
+
+    section#sobre .content header p {
+        font-size: 1.7rem;
+    }
+}

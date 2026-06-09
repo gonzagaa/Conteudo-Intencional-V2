@@ -1,0 +1,66 @@
+#cta {
+    overflow: hidden;
+    position: relative;
+    background: #dcd2c8;
+
+    border-radius: 0 5rem 0 0;
+}
+
+#cta header {
+    margin-bottom: 0;
+
+    text-align: left;
+}
+
+#cta header h2 {
+    font-size: 3.5rem;
+    line-height: .9;
+    font-weight: 600;
+}
+
+#cta header p {
+    font-size: 1.6rem;
+}
+
+#cta header a button {
+    margin-top: 3rem;
+}
+
+#cta header h3 {
+    color: var(--marrom);
+    font-family: var(--bricolage);
+    font-size: 1.8rem;
+
+    margin-top: 2rem;
+
+    background: #ece6e1;
+    padding: 2rem;
+    border-radius: 1.5rem;
+
+    border-bottom: 7px solid var(--marrom);
+    border-left: 5px solid var(--marrom);
+}
+
+#cta header h3 span {
+    color: var(--laranja-vibrante);
+}
+
+@media (min-width: 1080px) {
+    section#cta {
+        border-radius: 10rem 10rem 0 0;
+    }
+
+    section#cta header {
+        padding-inline: 25%;
+
+        text-align: center;
+    }
+
+    section#cta header h2 {
+        font-size: 5.5rem;
+    }
+
+    section#cta header p {
+        font-size: 1.8rem;
+    }
+}

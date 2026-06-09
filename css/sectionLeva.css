@@ -1,0 +1,70 @@
+#leva {
+    overflow: hidden;
+    position: relative;
+    background: #ece6e1;
+}
+
+#leva .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#leva .cards .card {
+    width: 100%;
+    text-align: left;
+    /* background:
+    linear-gradient(180deg, rgba(255,255,255,.25) 0%, rgba(255,255,255,0) 45%),
+    linear-gradient(135deg, var(--laranja-vibrante) 0%, var(--laranja-queimado) 100%); */
+
+    background: #e7ded5;
+    border-bottom: 6px solid var(--marrom);
+    border-left: 3px solid var(--marrom);
+
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    border-radius: 1.5rem;
+}
+
+#leva .card img {
+    width: 4rem;
+}
+
+#leva .card p {
+    color: var(--marrom);
+    font-family: var(--bricolage);
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+@media (min-width: 1080px) {
+  #leva .cards {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: stretch;
+  }
+
+  #leva .cards .card {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* 3 cards em cima */
+  #leva .cards .card:nth-child(1),
+  #leva .cards .card:nth-child(2),
+  #leva .cards .card:nth-child(3) {
+    grid-column: span 4;
+  }
+
+  /* 4 cards em baixo */
+  #leva .cards .card:nth-child(4),
+  #leva .cards .card:nth-child(5),
+  #leva .cards .card:nth-child(6),
+  #leva .cards .card:nth-child(7) {
+    grid-column: span 3;
+  }
+}

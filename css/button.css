@@ -1,0 +1,159 @@
+a {
+  width: 100%;
+  text-decoration: none;
+  display: inline-block;
+}
+
+button.button {
+  width: 100%;
+  min-height: 8.4rem;
+  padding: 1.9rem 8.5rem 1.9rem 4rem;
+
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  outline: none;
+
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+  color: #fff4ee;
+
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.25) 0%, rgba(255,255,255,0) 45%),
+    linear-gradient(135deg, var(--laranja-vibrante) 0%, var(--laranja-queimado) 100%);
+
+  box-shadow:
+    0 0 0 0.4rem rgba(165, 62, 15, 0.16),
+    0 1.8rem 4rem rgba(76, 24, 6, 0.28),
+    inset 0 0.1rem 0 rgba(255, 255, 255, 0.24),
+    inset 0 -0.8rem 1.8rem rgba(74, 19, 2, 0.16);
+
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+
+  transition:
+    transform 300ms ease,
+    filter 300ms ease,
+    box-shadow 300ms ease;
+}
+
+button.button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 18% 0%,
+      rgba(255, 255, 255, 0.22),
+      transparent 34%
+    ),
+    linear-gradient(
+      120deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.14) 45%,
+      transparent 72%
+    );
+
+  opacity: 0.75;
+  transform: translateX(-35%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+button.button::after {
+  content: "➜";
+
+  width: 5.8rem;
+  height: 5.8rem;
+
+  position: absolute;
+  top: 50%;
+  right: 1.3rem;
+  transform: translateY(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 999px;
+
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1;
+  color: #fff;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.26),
+    rgba(255, 255, 255, 0.08)
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.22);
+
+  box-shadow:
+    inset 0 0.1rem 0 rgba(255, 255, 255, 0.32),
+    inset 0 -0.6rem 1.2rem rgba(255, 255, 255, 0.05),
+    0 1rem 2rem rgba(58, 18, 4, 0.16);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  transition:
+    transform 300ms ease,
+    background 300ms ease,
+    box-shadow 300ms ease;
+}
+
+button.button:hover {
+  cursor: pointer;
+  filter: brightness(1.08);
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 0 0 0.5rem rgba(165, 62, 15, 0.22),
+    0 2.4rem 5rem rgba(76, 24, 6, 0.38),
+    inset 0 0.1rem 0 rgba(255, 255, 255, 0.3),
+    inset 0 -0.8rem 1.8rem rgba(74, 19, 2, 0.2);
+}
+
+button.button:hover::after {
+  transform: translateY(-50%) translateX(0.4rem);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.34),
+    rgba(255, 255, 255, 0.12)
+  );
+}
+
+button.button:active {
+  transform: translateY(-1px) scale(0.985);
+}
+
+button.button:active::after {
+  transform: translateY(-50%) scale(0.94);
+}
+
+@media (min-width: 1080px) {
+  a {
+    width: initial;
+  }
+
+  button.button {
+    width: initial;
+    min-width: 34rem;
+    min-height: 8rem;
+    padding: 2.4rem 9rem 2.4rem 4.8rem;
+    font-size: 1.6rem;
+    border-radius: 999px;
+  }
+
+  button.button::after {
+    width: 5.8rem;
+    height: 5.8rem;
+    right: 1.1rem;
+    border-radius: 999px;
+  }
+}

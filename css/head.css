@@ -1,0 +1,66 @@
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+header h2 {
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 1.1;
+
+    font-family: var(--bricolage);
+    color: var(--marrom);
+}
+
+header h2 span {
+    font-weight: 600;
+
+    font-family: var(--serif);
+    color: var(--laranja-vibrante);
+
+    text-shadow:
+    var(--laranja-vibrante) 0.1px 0px 0px,
+    var(--laranja-vibrante) 0.05403px 0.084147px 0px,
+    var(--laranja-vibrante) -0.041615px 0.09093px 0px,
+    var(--laranja-vibrante) -0.098999px 0.014112px 0px,
+    var(--laranja-vibrante) -0.065364px -0.07568px 0px,
+    var(--laranja-vibrante) 0.028366px -0.095892px 0px,
+    var(--laranja-vibrante) 0.096017px -0.027942px 0px;
+}
+
+header p {
+    color: var(--marrom);
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+header p span {
+    color: var(--marrom);
+    font-weight: 700;
+}
+
+@media (min-width: 1080px) {
+    header {
+        margin-bottom: 4rem;
+    }
+
+    header h2 {
+        font-size: 5rem;
+    }
+
+    header h2 span {
+        text-shadow: none;
+    }
+
+    header p {
+        font-size: 1.6rem;
+    }
+
+    header span.span {
+        font-size: 1.4rem;
+        letter-spacing: 12px;
+    }
+}
