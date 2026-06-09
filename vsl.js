@@ -1,5 +1,5 @@
 // Tempo (em segundos) até liberar a página. Trocar para 120 = 2 minutos.
-const VSL_DELAY_SECONDS = 10;
+const VSL_DELAY_SECONDS = 120;
 
 (function () {
     const gate = document.getElementById('vsl-gate');

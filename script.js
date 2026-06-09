@@ -5,6 +5,10 @@ function atualizar() {
 
   if (dif <= 0) {
     document.getElementById('tarja').style.display = 'none';
+    const preco = document.getElementById('preco');
+    if (preco) preco.textContent = '59,90';
+    const obs = document.getElementById('obs-oferta');
+    if (obs) obs.style.display = 'none';
     clearInterval(intervalo);
     return;
   }
