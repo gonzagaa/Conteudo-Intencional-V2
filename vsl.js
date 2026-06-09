@@ -1,4 +1,4 @@
-// Tempo (em segundos) até liberar a página. Trocar para 120 = 2 minutos.
+// Tempo (em segundos) até liberar a página.
 const VSL_DELAY_SECONDS = 120;
 
 (function () {
@@ -8,17 +8,22 @@ const VSL_DELAY_SECONDS = 120;
     const html = document.documentElement;
     const body = document.body;
 
+    // Aplica lock em um único frame, evitando reflow forçado.
     function lock() {
-        try { if (typeof lenis !== 'undefined' && lenis) lenis.stop(); } catch (e) {}
-        html.style.overflow = 'hidden';
-        body.style.overflow = 'hidden';
+        requestAnimationFrame(() => {
+            html.style.overflow = 'hidden';
+            body.style.overflow = 'hidden';
+            try { if (window.__lenis) window.__lenis.stop(); } catch (e) {}
+        });
     }
 
     function unlock() {
-        try { if (typeof lenis !== 'undefined' && lenis) lenis.start(); } catch (e) {}
-        html.style.overflow = '';
-        body.style.overflow = '';
-        gate.classList.add('is-unlocked');
+        requestAnimationFrame(() => {
+            html.style.overflow = '';
+            body.style.overflow = '';
+            try { if (window.__lenis) window.__lenis.start(); } catch (e) {}
+            gate.classList.add('is-unlocked');
+        });
     }
 
     lock();

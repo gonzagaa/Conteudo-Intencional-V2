@@ -7,7 +7,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Instrument+Serif:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Instrument+Serif:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Instrument+Serif:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"></noscript>
 
     <!-- Primary Meta Tags -->
     <title>Conteúdo Intencional por Gabriella Viriato</title>
@@ -15,33 +16,29 @@
     <meta name="Author" content="Gustavo Gonzaga">
     <meta name="robots" content="index, follow" />
 
-    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.14/dist/lenis.css" />
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.14/dist/lenis.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.14/dist/lenis.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    </noscript>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/index.css?v=5asnbbkjae">
     <link rel="stylesheet" href="./css/vsl.css">
 
-  <link rel="preload" href="https://player-vz-0126cfcf-ba4.tv.pandavideo.com.br/embed/css/plyr.css" as="style">
-<link rel="preload" href="https://player-vz-0126cfcf-ba4.tv.pandavideo.com.br/embed/css/styles.css" as="style">
-<link rel="preload" href="https://player-vz-0126cfcf-ba4.tv.pandavideo.com.br/embed/css/pb.css" as="style">
-<link rel="preload" href="https://config.tv.pandavideo.com.br/vz-0126cfcf-ba4/9ec71f9c-00c1-4d7c-bf2a-25379bb45af5.json" as="fetch">
-<link rel="preload" href="https://config.tv.pandavideo.com.br/vz-0126cfcf-ba4/config.json" as="fetch">
-<link rel="dns-prefetch" href="https://b-vz-0126cfcf-ba4.tv.pandavideo.com.br">
-<link rel="preload" href="https://b-vz-0126cfcf-ba4.tv.pandavideo.com.br/9ec71f9c-00c1-4d7c-bf2a-25379bb45af5/playlist.m3u8" as="fetch">
-<link rel="prerender" href="https://player-vz-0126cfcf-ba4.tv.pandavideo.com.br/embed/?v=9ec71f9c-00c1-4d7c-bf2a-25379bb45af5">
-<link rel="dns-prefetch" href="https://player-vz-0126cfcf-ba4.tv.pandavideo.com.br">
-
-   
+    <link rel="dns-prefetch" href="https://player-vz-0126cfcf-ba4.tv.pandavideo.com.br">
+    <link rel="dns-prefetch" href="https://b-vz-0126cfcf-ba4.tv.pandavideo.com.br">
+    <link rel="dns-prefetch" href="https://config.tv.pandavideo.com.br">
 </head>
 <body id="body" class="smooth-scroll-wrapper">
     <section id="vsl-gate">
         <div class="vsl-inner">
-            <h1 class="vsl-title">Do zero ao Conteúdo Intencional - O plano prático para se posicionar e <span>vender</span> no instagram em 2026</span></h1>
-            <img src="./assets/tempo.avif" alt="">
+            <h1 class="vsl-title">Do zero ao Conteúdo Intencional - O plano prático para se posicionar e <span>vender</span> no instagram em 2026</h1>
+            <img src="./assets/tempo.avif" alt="" fetchpriority="high" decoding="async">
 
-                <iframe id="panda-9ec71f9c-00c1-4d7c-bf2a-25379bb45af5" src="https://player-vz-0126cfcf-ba4.tv.pandavideo.com.br/embed/?v=9ec71f9c-00c1-4d7c-bf2a-25379bb45af5" style="border:none;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture" allowfullscreen=true fetchpriority="high"></iframe>
+            <iframe id="panda-9ec71f9c-00c1-4d7c-bf2a-25379bb45af5" data-src="https://player-vz-0126cfcf-ba4.tv.pandavideo.com.br/embed/?v=9ec71f9c-00c1-4d7c-bf2a-25379bb45af5" style="border:none;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture" allowfullscreen="true" loading="lazy"></iframe>
         </div>
 
         <div class="vsl-scroll-hint">
@@ -62,53 +59,44 @@
                     <span class="numero"><span id="segundos">00</span>s</span>
                 </div>
             </div>
-
-            
         </header>
     </div>
     </div>
 
     <header class="header" id="home">
-        <img class="graficos mobile" src="./assets/bg liso mobile v1.avif" alt="">
-        <img class="graficos desktop" src="./assets/bg liso desktop v1.avif" alt="">
+        <picture>
+            <source media="(min-width: 769px)" srcset="./assets/bg liso desktop v1.avif" type="image/avif">
+            <img class="graficos" src="./assets/bg liso mobile v1.avif" alt="" loading="lazy" decoding="async">
+        </picture>
         <div class="blush um"></div>
         <div class="blush dois"></div>
 
         <div class="wrapper">
             <div class="content">
                 <div class="image">
-                    
                 </div>
 
                 <div class="text">
-                    <img data-aos="fade-down" data-aos-duration="1000" class="logo desktop" src="./assets/se voce chegou ate aqui.avif" alt="">
-                    <img data-aos="fade-down" data-aos-duration="1000" class="logo mobile" src="./assets/se voce chegou ate aqui.avif" alt="">
+                    <img data-aos="fade-down" data-aos-duration="1000" class="logo desktop" src="./assets/se voce chegou ate aqui.avif" alt="" loading="lazy" decoding="async">
+                    <img data-aos="fade-down" data-aos-duration="1000" class="logo mobile" src="./assets/se voce chegou ate aqui.avif" alt="" loading="lazy" decoding="async">
                     <h1 data-aos="fade-up" data-aos-delay="100">A internet não recompensa quem é mais competente. Recompensa quem desperta mais <span>interesse</span> na audiência.</h1>
 
-                    <p data-aos="fade-up" data-aos-delay="200"><span>E é aí que trava.</span> Você senta pra criar e não sabe o que falar. Posta, testa, copia. E o <span>resultado não vem.</span>
-</p>
-
-                    <!-- <p class="laranja">E é aí que <span class="laranja">trava</span>.</p>
-
-                    <p>Você senta pra criar e não sabe o que falar. Você posta, aparece, testa formato, copia o que funciona pra outros. E <span>o resultado não vem</span>.</p> -->
+                    <p data-aos="fade-up" data-aos-delay="200"><span>E é aí que trava.</span> Você senta pra criar e não sabe o que falar. Posta, testa, copia. E o <span>resultado não vem.</span></p>
 
                     <div class="topics">
                         <div class="topic" data-aos="fade-up" data-aos-delay="300">
-                            <img src="./assets/Porque a internet não mede competência..avif" alt="">
-
-                            <img src="./assets/Ela mede atenção..avif" alt="">
+                            <img src="./assets/Porque a internet não mede competência..avif" alt="" loading="lazy" decoding="async">
+                            <img src="./assets/Ela mede atenção..avif" alt="" loading="lazy" decoding="async">
                         </div>
 
                         <div class="topic" data-aos="fade-up" data-aos-delay="400">
-                            <img src="./assets/E atenção não se conquista publicando mais..avif" alt="">
-
-                            <img src="./assets/Se conquista comunicando melhor..avif" alt="">
+                            <img src="./assets/E atenção não se conquista publicando mais..avif" alt="" loading="lazy" decoding="async">
+                            <img src="./assets/Se conquista comunicando melhor..avif" alt="" loading="lazy" decoding="async">
                         </div>
 
                         <div class="topic" data-aos="fade-up" data-aos-delay="500">
-                            <img src="./assets/O problema não é falta de conteúdo..avif" alt="">
-
-                            <img src="./assets/É falta de intenção..avif" alt="">
+                            <img src="./assets/O problema não é falta de conteúdo..avif" alt="" loading="lazy" decoding="async">
+                            <img src="./assets/É falta de intenção..avif" alt="" loading="lazy" decoding="async">
                         </div>
                     </div>
 
@@ -134,9 +122,9 @@
                     <p data-aos="fade-up" data-aos-delay="100">Você estudou para ser um bom profissional. <span>Não para virar criador de conteúdo.</span></p>
 
                     <div class="topics">
-                        <p data-aos="fade-up" data-aos-delay="150"><ion-icon name="arrow-forward-outline"></ion-icon> Aprendemos a estudar.</p>
-                        <p data-aos="fade-up" data-aos-delay="250"><ion-icon name="arrow-forward-outline"></ion-icon> Aprendemos a trabalhar.</p>
-                        <p data-aos="fade-up" data-aos-delay="350"><ion-icon name="arrow-forward-outline"></ion-icon> Aprendemos a nos especializar.</p>
+                        <p data-aos="fade-up" data-aos-delay="150"><svg viewBox="0 0 512 512" width="1em" height="1em" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" aria-hidden="true"><path d="M268 112l144 144-144 144M392 256H100"/></svg> Aprendemos a estudar.</p>
+                        <p data-aos="fade-up" data-aos-delay="250"><svg viewBox="0 0 512 512" width="1em" height="1em" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" aria-hidden="true"><path d="M268 112l144 144-144 144M392 256H100"/></svg> Aprendemos a trabalhar.</p>
+                        <p data-aos="fade-up" data-aos-delay="350"><svg viewBox="0 0 512 512" width="1em" height="1em" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" aria-hidden="true"><path d="M268 112l144 144-144 144M392 256H100"/></svg> Aprendemos a nos especializar.</p>
                     </div>
 
                     <p data-aos="fade-up">Mas não nos ensinaram a transformar conhecimento em algo que as pessoas queiram consumir. Não nos ensinaram a despertar atenção. E hoje, <span>essa habilidade se tornou indispensável.</span></p>
@@ -145,8 +133,8 @@
                     <h3 data-aos="fade-up">O Conteúdo Intencional existe para isso: te ensinar a <span>transformar</span> o que você sabe em conteúdo que as pessoas param para <span>consumir</span>.</h3>
                 </header>
 
-                <img class="star um" src="./assets/star ci.avif" alt="">
-                <img class="star dois" src="./assets/star ci.avif" alt="">
+                <img class="star um" src="./assets/star ci.avif" alt="" loading="lazy" decoding="async">
+                <img class="star dois" src="./assets/star ci.avif" alt="" loading="lazy" decoding="async">
             </div>
         </div>
     </section>
@@ -163,54 +151,54 @@
 
                     <div data-aos="fade-up-right" data-aos-duration="1400" class="tabela">
                         <h3><span>Sem</span> Conteúdo Intencional</h3>
-        
+
                         <div class="topics">
                             <div class="topic">
-                                <span class="emoji"><ion-icon name="close-outline"></ion-icon></span> 
+                                <span class="emoji"><svg viewBox="0 0 512 512" width="1em" height="1em" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" aria-hidden="true"><path d="M368 368L144 144M368 144L144 368"/></svg></span>
                                 <p>Produz conteúdo que <span>não desperta interesse</span> na audiência</p>
                             </div>
                             <div class="topic">
-                                <span class="emoji"><ion-icon name="close-outline"></ion-icon></span> 
+                                <span class="emoji"><svg viewBox="0 0 512 512" width="1em" height="1em" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" aria-hidden="true"><path d="M368 368L144 144M368 144L144 368"/></svg></span>
                                 <p>Cria conteúdos genéricos que poderiam ter sido publicados por <span>qualquer pessoa</span></p>
                             </div>
                             <div class="topic">
-                                <span class="emoji"><ion-icon name="close-outline"></ion-icon></span> 
+                                <span class="emoji"><svg viewBox="0 0 512 512" width="1em" height="1em" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" aria-hidden="true"><path d="M368 368L144 144M368 144L144 368"/></svg></span>
                                 <p>Depende de <span>tendências</span> para chamar atenção</p>
                             </div>
                             <div class="topic">
-                                <span class="emoji"><ion-icon name="close-outline"></ion-icon></span> 
+                                <span class="emoji"><svg viewBox="0 0 512 512" width="1em" height="1em" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" aria-hidden="true"><path d="M368 368L144 144M368 144L144 368"/></svg></span>
                                 <p><span>Trava na hora</span> de criar</p>
                             </div>
 
                             <div class="topic">
-                                <span class="emoji"><ion-icon name="close-outline"></ion-icon></span> 
+                                <span class="emoji"><svg viewBox="0 0 512 512" width="1em" height="1em" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" aria-hidden="true"><path d="M368 368L144 144M368 144L144 368"/></svg></span>
                                 <p>Perde espaço para <span>profissionais menos preparados</span></p>
                             </div>
                         </div>
                     </div>
-        
+
                     <div data-aos="fade-up-left" data-aos-duration="1400" data-aos-delay="150" class="tabela quants">
                         <h3><span>Com</span> Conteúdo Intencional</h3>
-        
+
                         <div class="topics">
                             <div class="topic">
-                                <span class="emoji"><ion-icon name="checkmark-outline"></ion-icon></span> 
+                                <span class="emoji"><svg viewBox="0 0 512 512" width="1em" height="1em" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" aria-hidden="true"><path d="M416 128L192 384l-96-96"/></svg></span>
                                 <p>Cria conteúdos que capturam a <span>atenção da audiência</span></p>
                             </div>
                             <div class="topic">
-                                <span class="emoji"><ion-icon name="checkmark-outline"></ion-icon></span> 
+                                <span class="emoji"><svg viewBox="0 0 512 512" width="1em" height="1em" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" aria-hidden="true"><path d="M416 128L192 384l-96-96"/></svg></span>
                                 <p>Tem um processo de <span>criação leve e replicável</span></p>
                             </div>
                             <div class="topic">
-                                <span class="emoji"><ion-icon name="checkmark-outline"></ion-icon></span> 
+                                <span class="emoji"><svg viewBox="0 0 512 512" width="1em" height="1em" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" aria-hidden="true"><path d="M416 128L192 384l-96-96"/></svg></span>
                                 <p>Usa sua própria <span>identidade ao seu favor</span></p>
                             </div>
                             <div class="topic">
-                                <span class="emoji"><ion-icon name="checkmark-outline"></ion-icon></span> 
+                                <span class="emoji"><svg viewBox="0 0 512 512" width="1em" height="1em" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" aria-hidden="true"><path d="M416 128L192 384l-96-96"/></svg></span>
                                 <p><span>Fortalece sua credibilidade</span> através do conteúdo</p>
                             </div>
                             <div class="topic">
-                                <span class="emoji"><ion-icon name="checkmark-outline"></ion-icon></span> 
+                                <span class="emoji"><svg viewBox="0 0 512 512" width="1em" height="1em" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" aria-hidden="true"><path d="M416 128L192 384l-96-96"/></svg></span>
                                 <p>Atrai clientes, convites e <span>oportunidades certas</span></p>
                             </div>
                         </div>
@@ -233,7 +221,7 @@
                 <path d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z" class="shape-fill"></path>
             </svg>
         </div>
-        <img class="bg" src="./assets/bg escuro.avif" alt="">
+        <img class="bg" src="./assets/bg escuro.avif" alt="" loading="lazy" decoding="async">
 
         <div class="wrapper">
             <div class="content">
@@ -242,37 +230,37 @@
 
                     <div class="topics">
                         <div class="topic" data-aos="fade-up" data-aos-delay="50">
-                            <img src="./assets/arrow.avif" alt="">
+                            <img src="./assets/arrow.avif" alt="" loading="lazy" decoding="async">
                             <p>Criar conteúdos que <span>capturam a atenção</span> da audiência</p>
                         </div>
 
                         <div class="topic" data-aos="fade-up" data-aos-delay="100">
-                            <img src="./assets/arrow.avif" alt="">
+                            <img src="./assets/arrow.avif" alt="" loading="lazy" decoding="async">
                             <p><span>Transformar conhecimento em conteúdos</span> que as pessoas querem consumir</p>
                         </div>
 
                         <div class="topic" data-aos="fade-up" data-aos-delay="150">
-                            <img src="./assets/arrow.avif" alt="">
+                            <img src="./assets/arrow.avif" alt="" loading="lazy" decoding="async">
                             <p>Usar IA para acelerar sua produção de conteúdo <span>sem os vícios da escrita artificial</span></p>
                         </div>
 
                         <div class="topic" data-aos="fade-up" data-aos-delay="200">
-                            <img src="./assets/arrow.avif" alt="">
+                            <img src="./assets/arrow.avif" alt="" loading="lazy" decoding="async">
                             <p>Desenvolver uma voz própria que <span>ninguém consegue copiar</span></p>
                         </div>
 
                         <div class="topic" data-aos="fade-up" data-aos-delay="250">
-                            <img src="./assets/arrow.avif" alt="">
+                            <img src="./assets/arrow.avif" alt="" loading="lazy" decoding="async">
                             <p>Usar uma estrutura que transforma qualquer ideia em <span>conteúdo em minutos</span></p>
                         </div>
 
                         <div class="topic" data-aos="fade-up" data-aos-delay="300">
-                            <img src="./assets/arrow.avif" alt="">
+                            <img src="./assets/arrow.avif" alt="" loading="lazy" decoding="async">
                             <p>Usar suas opiniões para <span>fortalecer seu posicionamento</span></p>
                         </div>
 
                         <div class="topic" data-aos="fade-up" data-aos-delay="350">
-                            <img src="./assets/arrow.avif" alt="">
+                            <img src="./assets/arrow.avif" alt="" loading="lazy" decoding="async">
                             <p>Construir um plano de <span>vendas orgânicas de 30 dias</span></p>
                         </div>
 
@@ -302,37 +290,37 @@
 
                 <div class="cards">
                     <div class="card" data-aos="fade-up" data-aos-delay="50">
-                        <img src="./assets/check ci.avif" alt="">
+                        <img src="./assets/check ci.avif" alt="" loading="lazy" decoding="async">
                         <p>I.A Pessoal Configurada</p>
                     </div>
 
                     <div class="card" data-aos="fade-up" data-aos-delay="100">
-                        <img src="./assets/check ci.avif" alt="">
+                        <img src="./assets/check ci.avif" alt="" loading="lazy" decoding="async">
                         <p>Sistema de Roteiros e Checklists</p>
                     </div>
 
                     <div class="card" data-aos="fade-up" data-aos-delay="150">
-                        <img src="./assets/check ci.avif" alt="">
+                        <img src="./assets/check ci.avif" alt="" loading="lazy" decoding="async">
                         <p>Calendário de Conteúdo de 30 Dias</p>
                     </div>
 
                     <div class="card" data-aos="fade-up" data-aos-delay="200">
-                        <img src="./assets/check ci.avif" alt="">
+                        <img src="./assets/check ci.avif" alt="" loading="lazy" decoding="async">
                         <p>Templates e Estruturas Prontas</p>
                     </div>
 
                     <div class="card" data-aos="fade-up" data-aos-delay="250">
-                        <img src="./assets/check ci.avif" alt="">
+                        <img src="./assets/check ci.avif" alt="" loading="lazy" decoding="async">
                         <p>Biblioteca de Formatos (atualizada continuamente)</p>
                     </div>
 
                     <div class="card" data-aos="fade-up" data-aos-delay="300">
-                        <img src="./assets/check ci.avif" alt="">
+                        <img src="./assets/check ci.avif" alt="" loading="lazy" decoding="async">
                         <p>Aula Bônus: Seja Verdadeiramente Criativo</p>
                     </div>
 
                     <div class="card" data-aos="fade-up" data-aos-delay="350">
-                        <img src="./assets/check ci.avif" alt="">
+                        <img src="./assets/check ci.avif" alt="" loading="lazy" decoding="async">
                         <p>Plano de Vendas Orgânicas</p>
                     </div>
                 </div>
@@ -342,13 +330,13 @@
 
     <section id="padroes">
     <div class="padroes-box">
-      
+
       <div class="padroes-marquee">
         <div class="padroes-track">
           <div class="padroes-item">
             <span>✦</span>
             <strong>ATENÇÃO</strong>
-            </div>A
+            </div>
 
             <div class="padroes-item">
             <span>✦</span>
@@ -425,27 +413,27 @@
 
                     <div class="topics">
                         <div class="topic" data-aos="fade-left" data-aos-delay="100">
-                            <img src="./assets/check ci.avif" alt="">
+                            <img src="./assets/check ci.avif" alt="" loading="lazy" decoding="async">
                             <p>Acesso por 12 meses</p>
                         </div>
 
                         <div class="topic" data-aos="fade-left" data-aos-delay="200">
-                            <img src="./assets/check ci.avif" alt="">
+                            <img src="./assets/check ci.avif" alt="" loading="lazy" decoding="async">
                             <p>Todas as aulas</p>
                         </div>
 
                         <div class="topic" data-aos="fade-left" data-aos-delay="300">
-                            <img src="./assets/check ci.avif" alt="">
+                            <img src="./assets/check ci.avif" alt="" loading="lazy" decoding="async">
                             <p>Todos os bônus</p>
                         </div>
 
                         <div class="topic" data-aos="fade-left" data-aos-delay="400">
-                            <img src="./assets/check ci.avif" alt="">
+                            <img src="./assets/check ci.avif" alt="" loading="lazy" decoding="async">
                             <p>Atualizações inclusas</p>
                         </div>
 
                         <div class="topic" data-aos="fade-left" data-aos-delay="500">
-                            <img src="./assets/check ci.avif" alt="">
+                            <img src="./assets/check ci.avif" alt="" loading="lazy" decoding="async">
                             <p>Garantia de 7 dias</p>
                         </div>
                     </div>
@@ -456,19 +444,19 @@
                         <p>O que <span>nossos alunos</span> tem falado do curso:</p>
                         <div class="swiper checkout-depoimentos-swiper">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="./assets/depo gabi 1.avif" alt=""></div>
-                                <div class="swiper-slide"><img src="./assets/depo gabi 2.avif" alt=""></div>
-                                <div class="swiper-slide"><img src="./assets/depo gabi 3.avif" alt=""></div>
-                                <div class="swiper-slide"><img src="./assets/depo gabi 4.avif" alt=""></div>
-                                <div class="swiper-slide"><img src="./assets/depo gabi 5.avif" alt=""></div>
+                                <div class="swiper-slide"><img src="./assets/depo gabi 1.avif" alt="" loading="lazy" decoding="async"></div>
+                                <div class="swiper-slide"><img src="./assets/depo gabi 2.avif" alt="" loading="lazy" decoding="async"></div>
+                                <div class="swiper-slide"><img src="./assets/depo gabi 3.avif" alt="" loading="lazy" decoding="async"></div>
+                                <div class="swiper-slide"><img src="./assets/depo gabi 4.avif" alt="" loading="lazy" decoding="async"></div>
+                                <div class="swiper-slide"><img src="./assets/depo gabi 5.avif" alt="" loading="lazy" decoding="async"></div>
                             </div>
                             <div class="swiper-pagination"></div>
                         </div>
                     </div>
                 </header>
 
-                <img class="star um" src="./assets/star ci.avif" alt="">
-                <img class="star dois" src="./assets/star ci.avif" alt="">
+                <img class="star um" src="./assets/star ci.avif" alt="" loading="lazy" decoding="async">
+                <img class="star dois" src="./assets/star ci.avif" alt="" loading="lazy" decoding="async">
             </div>
         </div>
     </section>
@@ -476,10 +464,9 @@
     <section id="sobre">
         <div class="wrapper">
             <div class="content">
-                <img data-aos="fade-right" data-aos-duration="1400" src="./assets/sobre gabi.avif" alt="">
+                <img data-aos="fade-right" data-aos-duration="1400" src="./assets/sobre gabi.avif" alt="" loading="lazy" decoding="async">
                 <header>
-                    <img data-aos="fade-up" src="./assets/quem e.avif" alt="">
-                    <!-- <h2><span>Quem é</span> Gabriella Viriato?</h2> -->
+                    <img data-aos="fade-up" src="./assets/quem e.avif" alt="" loading="lazy" decoding="async">
                     <p data-aos="fade-up" data-aos-delay="100">Gabriella Viriato é <span>copywriter sênior</span>, <span>estrategista de comunicação</span> e <span>mentora de profissionais</span> que querem transformar conteúdo em posicionamento, autoridade e vendas.</p>
                     <p data-aos="fade-up" data-aos-delay="200">Nos bastidores de grandes lançamentos, mentorias e infoprodutos, uniu copywriting, comportamento humano e criatividade aplicada para entender o que faz algumas pessoas serem escolhidas enquanto outras passam <span>despercebidas na internet</span>.</p>
                     <p data-aos="fade-up" data-aos-delay="300">Construiu sua própria audiência de forma orgânica, alcançando <span>milhões de visualizações</span>, dezenas de milhares de seguidores e centenas de vendas, sem polêmicas, fórmulas prontas ou exposição vazia. Transformou esses padrões em um método. <span>O resultado é o Conteúdo Intencional.</span></p>
@@ -507,8 +494,6 @@
         <div class="wrapper">
             <div class="content">
                 <p>© 2026 Viriato Copywriting - Todos os Direitos Reservados</p>
-
-                
             </div>
         </div>
     </section>
@@ -516,73 +501,11 @@
     <!-- Studio Alto Nível -->
     <script src="https://cdn.studioaltonivel.com/footer.js" defer></script>
 
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 1200,
-            easing: 'ease-out-quart',
-            once: true,
-            offset: 100,
-            delay: 0,
-        });
-    </script>
-    <script>
-        if (document.querySelector('.checkout-depoimentos-swiper')) {
-            new Swiper('.checkout-depoimentos-swiper', {
-                loop: true,
-                speed: 600,
-                grabCursor: true,
-                spaceBetween: 16,
-                slidesPerView: 1,
-                autoplay: {
-                    delay: 4000,
-                    disableOnInteraction: false,
-                    pauseOnMouseEnter: true,
-                },
-                pagination: {
-                    el: '.checkout-depoimentos-swiper .swiper-pagination',
-                    clickable: true,
-                },
-                breakpoints: {
-                    768: {
-                        slidesPerView: 2,
-                        spaceBetween: 20,
-                    },
-                    1080: {
-                        slidesPerView: 2,
-                        spaceBetween: 24,
-                        centeredSlides: true,
-                    },
-                },
-            });
-        }
-    </script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="./script.js"></script>
-
-    <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
-    <script>
-        // Initialize Lenis with options
-        const lenis = new Lenis({
-            smooth: true, // Ativa o scroll suave
-            duration: 1.1, // Define a duração do scroll (maior valor deixa mais lento)
-            easing: (t) => 1 - Math.pow(1 - t, 4), // Função de easing para suavidade
-        });
-
-
-        // Use requestAnimationFrame to continuously update the scroll
-        function raf(time) {
-            lenis.raf(time);
-            requestAnimationFrame(raf);
-        }
-
-        requestAnimationFrame(raf);
-    </script>
-
-    <script src="./vsl.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js" defer></script>
+    <script src="./script.js" defer></script>
+    <script src="./vsl.js" defer></script>
 </body>
 
 </html>

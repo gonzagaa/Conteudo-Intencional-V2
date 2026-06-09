@@ -25,9 +25,11 @@
     gap: .5rem;
 }
 
-#inicio .topics p ion-icon {
+#inicio .topics p ion-icon,
+#inicio .topics p svg {
     font-size: 2rem;
     color: var(--laranja-vibrante);
+    flex-shrink: 0;
 }
 
 #inicio header h3 {
