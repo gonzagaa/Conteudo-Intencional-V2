@@ -10,7 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 48px 24px 80px;
+    padding: 8px 24px 80px;
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
@@ -19,12 +19,12 @@
 }
 
 #vsl-gate img {
-    width: 50%;
+    width: 55%;
 }
 
 #vsl-gate .vsl-inner {
     width: 100%;
-    max-width: 620px;
+    max-width: 520px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -38,7 +38,7 @@
     font-family: var(--bricolage);
     color: var(--marrom);
     font-weight: 700;
-    font-size: 3.5rem;
+    font-size: 3rem;
     line-height: 1.15;
     letter-spacing: -0.02em;
     margin: 0;
