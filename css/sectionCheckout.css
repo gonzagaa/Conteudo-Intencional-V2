@@ -332,6 +332,15 @@
     transform: scale(1.2);
 }
 
+#checkout header .depoimentos p {
+    margin-bottom: 1rem;
+    font-family: var(--bricolage);
+}
+
+#checkout header .depoimentos p span {
+    color: var(--laranja-vibrante);
+}
+
 @media (min-width: 1080px) {
     section#checkout header .depoimentos {
         grid-column: 1 / -1;

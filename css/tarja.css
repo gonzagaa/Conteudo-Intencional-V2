@@ -1,7 +1,7 @@
 #tarja {
     position: fixed;
     z-index: 10;
-    bottom: 1%;
+    top: 1%;
     width: 93%;
     left: 50%;
     transform: translate(-50%, 0);
@@ -12,7 +12,7 @@
     /* liquid glass */
     background:
   linear-gradient(180deg, rgba(255,255,255,.25) 0%, rgba(255,255,255,0) 45%),
-  linear-gradient(135deg, #A63A32 0%, #7F2B25 100%);
+  linear-gradient(135deg, #FF3D00 0%, var(--laranja-queimado) 100%);
 
 }
 
@@ -47,7 +47,7 @@
   font-size: 2rem;
   font-weight: 600;
   line-height: 1;
-  color: #581d18;
+  color: #4f1503;
   font-family: var(--bricolage);
   font-variant-numeric: tabular-nums;
 }
@@ -55,7 +55,7 @@
 span#horas,
 span#minutos,
 span#segundos {
-    color: #A63A32;
+    color: #FF3D00;
     font-weight: 700;
 }
 
