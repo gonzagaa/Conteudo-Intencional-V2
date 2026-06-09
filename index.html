@@ -62,7 +62,10 @@
         };
         window.metaTrack = function(eventName, customData) {
             const eventId = window.metaEventId();
+            console.log('%c[META] Browser Pixel disparado', 'color:#1877f2;font-weight:bold', { eventName, eventId, customData });
             fbq('track', eventName, customData || {}, { eventID: eventId });
+
+            console.log('%c[META] Enviando para CAPI (servidor)...', 'color:#888', { eventName, eventId });
             fetch('/api/meta-capi', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -77,9 +80,19 @@
                     },
                 }),
                 keepalive: true,
-            }).catch(() => {});
+            })
+            .then(r => r.json().then(data => ({ status: r.status, data })))
+            .then(({ status, data }) => {
+                if (status === 200 && data.ok && data.fb?.events_received >= 1) {
+                    console.log('%c[META] ✅ CAPI OK — Meta recebeu o evento', 'color:#22c55e;font-weight:bold', data.fb);
+                } else {
+                    console.error('[META] ❌ CAPI falhou', { status, data });
+                }
+            })
+            .catch(err => console.error('[META] ❌ Erro ao chamar CAPI', err));
         };
 
+        console.log('%c[META] Inicializando pixel ' + '1250334555460081', 'color:#1877f2;font-weight:bold');
         window.metaTrack('PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
