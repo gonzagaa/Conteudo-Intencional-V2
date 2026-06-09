@@ -97,7 +97,7 @@
     gap: 6px;
     font-family: var(--bricolage);
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: var(--marrom);
     opacity: 0;
     pointer-events: none;
@@ -126,8 +126,8 @@
 @media (max-width: 600px) {
     #vsl-gate {
         padding: 36px 18px 72px;
-        min-height: 100vh;
-        min-height: 100dvh;
+        min-height: 110vh;
+        min-height: 110dvh;
     }
     #vsl-gate .vsl-inner {
         gap: 18px;
