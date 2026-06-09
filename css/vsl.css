@@ -1,0 +1,147 @@
+/* ============================================================
+   VSL Gate — tela inicial com vídeo, trava o scroll por X seg
+   ============================================================ */
+
+#vsl-gate {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    background-color: #e6ddd6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 24px 80px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+
+    z-index: 100000;
+}
+
+#vsl-gate img {
+    width: 50%;
+}
+
+#vsl-gate .vsl-inner {
+    width: 100%;
+    max-width: 620px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+}
+
+#vsl-gate .vsl-title {
+    font-family: var(--bricolage);
+    color: var(--marrom);
+    font-weight: 700;
+    font-size: 3.5rem;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin: 0;
+}
+
+#vsl-gate .vsl-title span {
+    font-family: var(--serif);
+    color: var(--laranja-vibrante);
+    font-style: italic;
+}
+
+#vsl-gate .vsl-subtitle {
+    font-family: var(--bricolage);
+    color: rgba(59, 36, 26, 0.65);
+    font-weight: 400;
+    font-size: clamp(0.95rem, 2.2vw, 1.1rem);
+    line-height: 1.5;
+    margin: 0;
+    max-width: 620px;
+}
+
+#vsl-gate .vsl-video {
+    width: 100%;
+    max-width: 880px;
+    margin-top: 8px;
+    position: relative;
+    aspect-ratio: 16 / 9;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #2a1810;
+    box-shadow: 0 18px 50px -20px rgba(59, 36, 26, 0.35);
+}
+
+#vsl-gate .vsl-video .vsl-placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--bricolage);
+    font-weight: 500;
+    color: rgba(230, 221, 214, 0.75);
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    letter-spacing: 0.02em;
+    background: linear-gradient(135deg, #3B241A 0%, #2a1810 100%);
+}
+
+#vsl-gate .vsl-scroll-hint {
+    position: absolute;
+    left: 50%;
+    bottom: 4%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--bricolage);
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--marrom);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.6s ease;
+}
+
+#vsl-gate.is-unlocked .vsl-scroll-hint {
+    opacity: 0.85;
+    animation: vslHintFloat 1.8s ease-in-out infinite;
+}
+
+#vsl-gate .vsl-scroll-hint .vsl-arrow {
+    width: 18px;
+    height: 18px;
+    border-right: 4px solid var(--marrom);
+    border-bottom: 4px solid var(--marrom);
+    transform: rotate(45deg);
+    margin-top: 2px;
+}
+
+@keyframes vslHintFloat {
+    0%, 100% { transform: translate(-50%, 0); }
+    50%      { transform: translate(-50%, 6px); }
+}
+
+@media (max-width: 600px) {
+    #vsl-gate {
+        padding: 36px 18px 72px;
+    }
+    #vsl-gate .vsl-inner {
+        gap: 18px;
+    }
+    #vsl-gate .vsl-video {
+        border-radius: 10px;
+    }
+    #vsl-gate .vsl-scroll-hint {
+        bottom: 7%;
+        font-size: 0.82rem;
+    }
+
+    #vsl-gate .vsl-title {
+        font-size: 2.7rem;
+    }
+
+    #vsl-gate img {
+        width: 100%;
+    }
+}
